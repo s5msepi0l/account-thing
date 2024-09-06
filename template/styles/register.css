@@ -1,0 +1,99 @@
+* {padding: 0; font-family: sans-serif}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+input[type="text"], input[type="password"] {
+    border-radius: .3rem;
+    border: 2px solid gray;
+
+    height: 2rem;
+}
+
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+
+    min-height: 15rem;
+    min-width: 20rem;
+    
+    padding: 0rem 2rem 3rem 2rem;
+
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.signup-options {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding-top: 2rem;
+}
+
+.signup-options > div {
+    padding-bottom: 0.5rem;
+}
+
+/*
+.remember-me >  label {
+}*/
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+
+    height: 10rem;
+
+    justify-content: space-between;
+}
+
+.signin-txt {
+    color: gray;
+}
+
+.signin-lnk {
+    color: #2271b1;;
+    text-decoration: none;
+}
+
+.signup-btn {
+    height: 3rem;
+    width: 6rem;
+
+
+    font-size: 18px;
+
+    background-color:#2271b1;;
+    border: 0;
+    border-radius: 0.3rem;
+    color: white
+}
+
+.nput-label {
+    color: rgb(96, 96, 96);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
