@@ -45,34 +45,29 @@ server.post("/login", (req, res) => {
     console.log(loginData.password);
     console.log(data)
     
-    if (loginData[data.username] === data.password && data.username !== undefined ) { // correct password
+    const user = fetch_user(data.username);
+    if (user != null && user.password == data.password) { // correct password
         console.log(data);
         console.log("Wight password");
         cookieIndex++;
         res.cookie("session-cookie", cookieIndex);
         cookieset.add(cookieIndex);
         
-        res.send(`
-            <!DOCTYPE html>
-            <html>
-                <head>
-                    <meta http-equiv="refresh" content="0; url=private"/>
-                </head>
-
-                <body>
-                    <p><a href="private">Redirect</a></p>
-                </body>
-            </html>
-        `);
+        res.json({
+            isValidated: true
+        });
             return ;
     } else { // undefined, Incorrect password
         console.log("Wong password");
-
+        res.json({
+            isValidated: false
+        })
     }
-    
+
+    /*
     res.json({
         msg: "wrong password"
-    });
+    });*/
 });
 
 //detele cookie auth token from hashset

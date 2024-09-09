@@ -1,3 +1,7 @@
+/*  ngl stylen var meir läsbar tills jag fick iden att leg till svärande kattor
+
+*/
+
 * {font-family: sans-serif}
 
 body, html {
@@ -9,7 +13,6 @@ body, html {
 }
 
 main {
-    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -25,12 +28,15 @@ input[type="text"], input[type="password"] {
 }
 
 .login-page {
-    display: flex;
+    position: relative;
+
     flex-direction: column;
     justify-content:space-evenly;
 
-    min-height: 13rem;
-    min-width: 20rem;
+    top: 40vh;
+
+    min-height: 20rem;
+    min-width: 25rem;
     padding: 2rem;
 
     border: 1px solid #ccc;
@@ -62,7 +68,11 @@ input[type="text"], input[type="password"] {
     justify-content: space-between;
 }
 
+
 .signup-txt {
+    position: absolute;
+    top: 75vh;
+
     color: gray;
 }
 
@@ -90,4 +100,31 @@ input[type="text"], input[type="password"] {
 .input-container {
     display: flex;
     flex-direction: column;
+}
+
+.login-action-popup {
+    width: 28rem;
+    top: 32vh;
+    position: absolute;
+    transform:translateY(-400px);
+
+    animation:kitten-reaction 0.5s forwards;
+}
+
+.login-action-popup > img {
+    width: 100%;
+
+    animation:kitten-reaction 0.2s;
+}
+
+@keyframes kitten-reaction {
+    0%{
+        height: 50px;
+        transform: translateY(100px);
+    }
+
+    100%{
+        transform: translateY((-800px));
+        height: 496px;
+    }
 }
