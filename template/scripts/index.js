@@ -1,7 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function() { //vänt för att saker ska lada ig?
-    const popup_win = document.getElementsBy<ClassName("register-window");
-    const form = this.querySelector(".login-form");
+    const form = document.querySelector(".login-form");
+
+    const input_forms = document.querySelectorAll(".nput");
+    console.log(input_forms[0]);
     var wrong_password_c = 0;
     
     console.log(form.elements[0].value);
@@ -22,11 +24,13 @@ document.addEventListener("DOMContentLoaded", function() { //vänt för att sake
             .then(data => {
               console.log(data);
               if (data.isValidated) {
-                window.location.href="/private";
+                console.log("redirect");
+                  window.location.href="/private";
               } else {
-                wrong_password_c++;
+                for (let i = 0; i<input_forms.length; i++) {
 
-                login_action();
+                  input_forms[i].style = "border-color: darkred";
+                }
               }
             })
         

@@ -5,6 +5,7 @@
 * {font-family: sans-serif}
 
 body, html {
+    display: flex;
     height: 100%;
     margin: 0;
     display: flex;
@@ -13,6 +14,7 @@ body, html {
 }
 
 main {
+    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -28,15 +30,15 @@ input[type="text"], input[type="password"] {
 }
 
 .login-page {
-    position: relative;
+
 
     flex-direction: column;
     justify-content:space-evenly;
 
     top: 40vh;
 
-    min-height: 20rem;
-    min-width: 25rem;
+    min-height: 13rem;
+    min-width: 20rem;
     padding: 2rem;
 
     border: 1px solid #ccc;
@@ -70,8 +72,6 @@ input[type="text"], input[type="password"] {
 
 
 .signup-txt {
-    position: absolute;
-    top: 75vh;
 
     color: gray;
 }
@@ -100,31 +100,4 @@ input[type="text"], input[type="password"] {
 .input-container {
     display: flex;
     flex-direction: column;
-}
-
-.login-action-popup {
-    width: 28rem;
-    top: 32vh;
-    position: absolute;
-    transform:translateY(-400px);
-
-    animation:kitten-reaction 0.5s forwards;
-}
-
-.login-action-popup > img {
-    width: 100%;
-
-    animation:kitten-reaction 0.2s;
-}
-
-@keyframes kitten-reaction {
-    0%{
-        height: 50px;
-        transform: translateY(100px);
-    }
-
-    100%{
-        transform: translateY((-800px));
-        height: 496px;
-    }
 }
